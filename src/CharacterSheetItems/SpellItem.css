@@ -1,29 +1,48 @@
-.spell-item{
+.spell-item,
+.Spell-Item-Editor-Row {
     background-color: white;
     font-variant: small-caps;
     border-bottom: 1px lightslategray solid;
     padding: 3px;
-    margin: 3px;
-
+    margin-left: 13px;
+    margin-right: 13px;
+    padding-left: 30px;
 }
-.spell-item:hover{
+
+.spell-item:hover {
     background-color: rgba(211, 211, 211, 0.5);
     background-blend-mode: lighten;
-
 }
 
-.Spell-Item-Editor{
-width: 100%;
-height: 1.5em;
-padding: 1px;
-border-top-style: hidden;
-border-right-style: hidden;
-border-left-style: hidden;
-border-bottom-style: 1px solid lightslategray;
-width: 50%;
-}
-
-.Spell-Item-Editor-Row{
+.Spell-Item-Editor-Row {
     display: flex;
-    flex-direction: row;
- }
+    flex-direction: row;    
+}
+
+.Spell-Item-Editor {
+    height: 2em;
+    width: 100%;
+    border-style: hidden;
+    font-variant: small-caps;
+}
+
+.Spell-Edit-Button {
+    border: 1px;
+    background-color: white;
+    border-style: inset;
+    border-radius: 3px;
+    box-shadow: inset;
+    
+}
+
+
+
+.Spell-Item-Editor:hover {
+    background-color: rgba(211, 211, 211, 0.5);
+    background-blend-mode: lighten;
+}
+
+.Spell-Type {
+    text-align: center;
+
+}

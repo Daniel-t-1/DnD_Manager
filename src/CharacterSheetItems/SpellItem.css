@@ -35,8 +35,6 @@
     
 }
 
-
-
 .Spell-Item-Editor:hover {
     background-color: rgba(211, 211, 211, 0.5);
     background-blend-mode: lighten;
@@ -44,5 +42,11 @@
 
 .Spell-Type {
     text-align: center;
+    background-image: url("../../public/Spellheader.svg");
+    background-repeat: no-repeat;
+    background-size: stretch;
+}
+
+.spell-header{
 
 }

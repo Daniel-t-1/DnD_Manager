@@ -1,0 +1,29 @@
+.spell-item{
+    background-color: white;
+    font-variant: small-caps;
+    border-bottom: 1px lightslategray solid;
+    padding: 3px;
+    margin: 3px;
+
+}
+.spell-item:hover{
+    background-color: rgba(211, 211, 211, 0.5);
+    background-blend-mode: lighten;
+
+}
+
+.Spell-Item-Editor{
+width: 100%;
+height: 1.5em;
+padding: 1px;
+border-top-style: hidden;
+border-right-style: hidden;
+border-left-style: hidden;
+border-bottom-style: 1px solid lightslategray;
+width: 50%;
+}
+
+.Spell-Item-Editor-Row{
+    display: flex;
+    flex-direction: row;
+ }

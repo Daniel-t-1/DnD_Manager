@@ -1,52 +1,65 @@
 .spell-item,
 .Spell-Item-Editor-Row {
-    background-color: white;
-    font-variant: small-caps;
-    border-bottom: 1px lightslategray solid;
-    padding: 3px;
-    margin-left: 13px;
-    margin-right: 13px;
-    padding-left: 30px;
+  background-color: white;
+  font-variant: small-caps;
+  border-bottom: 1px lightslategray solid;
+  padding: 3px;
+  margin-left: 13px;
+  margin-right: 13px;
+  padding-left: 30px;
 }
 
 .spell-item:hover {
-    background-color: rgba(211, 211, 211, 0.5);
-    background-blend-mode: lighten;
+  background-color: rgba(211, 211, 211, 0.5);
+  background-blend-mode: lighten;
 }
 
 .Spell-Item-Editor-Row {
-    display: flex;
-    flex-direction: row;    
+  display: flex;
+  flex-direction: row;
 }
 
 .Spell-Item-Editor {
-    height: 2em;
-    width: 100%;
-    border-style: hidden;
-    font-variant: small-caps;
+  height: 2em;
+  width: 100%;
+  border-style: hidden;
+  font-variant: small-caps;
 }
 
 .Spell-Edit-Button {
-    border: 1px;
-    background-color: white;
-    border-style: inset;
-    border-radius: 3px;
-    box-shadow: inset;
-    
+  border: 1px;
+  background-color: white;
+  border-style: inset;
+  border-radius: 3px;
+  box-shadow: inset;
 }
 
 .Spell-Item-Editor:hover {
-    background-color: rgba(211, 211, 211, 0.5);
-    background-blend-mode: lighten;
+  background-color: rgba(211, 211, 211, 0.5);
+  background-blend-mode: lighten;
+}
+
+.spell-header {
+  display: flex;
+  font-variant: small-caps;
+  height: 60px;
+  background-image: url("../../public/Spellheader.svg");
+  background-repeat: no-repeat;
+  background-size: stretch;
+}
+
+.Spell-Level {
+  flex: 0;
+  padding-left: 20px;
+  justify-content: center;
+  width: 50px;
 }
 
 .Spell-Type {
-    text-align: center;
-    background-image: url("../../public/Spellheader.svg");
-    background-repeat: no-repeat;
-    background-size: stretch;
-}
-
-.spell-header{
-
+  flex: 1;
+  text-align: center;
+  font-size: x-large;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }

@@ -1,59 +1,62 @@
-
 import "./SpellItem.css";
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-
-//collection of rows takes 
+//collection of rows takes
 export function Spells(props) {
-    const spells = props.spells.map(name => <SpellItem id={name} name={name} />);
+  const spells = props.spells.map((name) => (
+    <SpellItem id={name} name={name} />
+  ));
 
-    return (
-        <div>
-            <SpellHeader name={props.spellType}></SpellHeader>
-            <div >
-                {spells}
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <SpellHeader name={props.spellType}></SpellHeader>
+      <div>{spells}</div>
+    </div>
+  );
 }
-
 
 //spell item row
 function SpellItem(props) {
+  const [editing, setEdit] = useState(false);
+  const [name, setName] = useState(props.name);
 
-    const [editing, setEdit] = useState(false);
-    const [name, setName] = useState(props.name);
+  function onNameInputChanged(event) {
+    setName(event.target.value);
+  }
 
-    function onNameInputChanged(event) {
-        setName(event.target.value);
-    }
-
-
-    if (!editing) {
-
-        return (
-            <div id={props.id} className="spell-item" onClick={() => setEdit(!editing)}>{name}</div>
-        );
-    } else {
-        return (
-            <div className="Spell-Item-Editor-Row">
-                <input className="Spell-Item-Editor" onChange={onNameInputChanged} value={name}></input>
-                <button onClick={() => setEdit(!editing)} className="Spell-Edit-Button">Save</button>
-            </div>
-
-        );
-    }
+  if (!editing) {
+    return (
+      <div
+        id={props.id}
+        className="spell-item"
+        onClick={() => setEdit(!editing)}
+      >
+        {name}
+      </div>
+    );
+  } else {
+    return (
+      <div className="Spell-Item-Editor-Row">
+        <input
+          className="Spell-Item-Editor"
+          onChange={onNameInputChanged}
+          value={name}
+        ></input>
+        <button onClick={() => setEdit(!editing)} className="Spell-Edit-Button">
+          Save
+        </button>
+      </div>
+    );
+  }
 }
-
 
 //returns spells header
 function SpellHeader(props) {
-
-    return (
-        <div className="spell-header">
-            <h1 className="Spell-Type">{props.name}</h1>
-        </div>
-    );
-
+  return (
+    <div className="spell-header">
+      <div className="Spell-Level">0</div>
+      <div className="Spell-Type">{props.name}</div>
+    </div>
+  );
 }

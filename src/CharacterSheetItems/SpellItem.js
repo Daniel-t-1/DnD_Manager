@@ -1,32 +1,43 @@
 import "./SpellItem.css";
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 
 //collection of rows takes
 export function Spells(props) {
-  const spells = props.spells.map((name) => (
-    <SpellItem key={name} name={name} />
-  ));
+  const [spells, setSpells] = useState(props.spells);
+  const [spellLevel, setSpellLevel] = useState(props.spellLevel);
+  const [spellType, setSpellType] = useState(props.spellType);
+
+  function updateSpellname(id, Name) {
+    let oldState = [...spells];
+    oldState[id] = Name;
+    setSpells(oldState);
+  }
 
   return (
     <div>
-      <SpellHeader
-        name={props.spellType}
-        spellLevel={props.spellLevel}
-      ></SpellHeader>
-      <div>{spells}</div>
+      <SpellHeader name={spellType} spellLevel={props.spellLevel}></SpellHeader>
+      <div>
+        {spells.map((name, index) => (
+          <SpellItem
+            key={name}
+            id={index}
+            name={name}
+            onSpellchange={updateSpellname}
+          />
+        ))}
+      </div>
     </div>
   );
 }
 
 //spell item row
 function SpellItem(props) {
-  const [editing, setEdit] = useState(false);
+  const [editing, setEdit] = useState(true);
   const [name, setName] = useState(props.name);
 
-  function onNameInputChanged(event) {
-    setName(event.target.value);
-  }
+  const onNameInputChanged = (event) => {
+    props.onSpellchange(props.id, event.target.value);
+  };
 
   if (!editing) {
     return (
@@ -45,6 +56,7 @@ function SpellItem(props) {
           className="Spell-Item-Editor"
           onChange={onNameInputChanged}
           value={name}
+          autoFocus="autoFocus"
         ></input>
         <button onClick={() => setEdit(!editing)} className="Spell-Edit-Button">
           Save

@@ -6,6 +6,7 @@ export function Spells(props) {
   const [spells, setSpells] = useState(props.spells);
   const [spellLevel, setSpellLevel] = useState(props.spellLevel);
   const [spellType, setSpellType] = useState(props.spellType);
+  const [currentlyEditing, setCurrentlyEditing] = useState(-1);
 
   function updateSpellname(id, Name) {
     let oldState = [...spells];
@@ -13,9 +14,21 @@ export function Spells(props) {
     setSpells(oldState);
   }
 
+  function tryBeginEdit(id) {
+    if (currentlyEditing === -1) {
+      setCurrentlyEditing(id);
+    }
+  }
+
+  function tryEndEdit(id) {
+    if (currentlyEditing === id) {
+      setCurrentlyEditing(-1);
+    }
+  }
+
   return (
     <div>
-      <SpellHeader name={spellType} spellLevel={props.spellLevel}></SpellHeader>
+      <SpellHeader name={spellType} spellLevel={spellLevel}></SpellHeader>
       <div>
         {spells.map((name, index) => (
           <SpellItem
@@ -23,6 +36,9 @@ export function Spells(props) {
             id={index}
             name={name}
             onSpellchange={updateSpellname}
+            editing={currentlyEditing === index}
+            onBeginEdit={tryBeginEdit}
+            onEndEdit={tryEndEdit}
           />
         ))}
       </div>
@@ -32,21 +48,18 @@ export function Spells(props) {
 
 //spell item row
 function SpellItem(props) {
-  const [editing, setEdit] = useState(true);
-  const [name, setName] = useState(props.name);
-
   const onNameInputChanged = (event) => {
     props.onSpellchange(props.id, event.target.value);
   };
 
-  if (!editing) {
+  if (!props.editing) {
     return (
       <div
         id={props.id}
         className="spell-item"
-        onClick={() => setEdit(!editing)}
+        onClick={() => props.onBeginEdit(props.id)}
       >
-        {name}
+        {props.name}
       </div>
     );
   } else {
@@ -55,11 +68,14 @@ function SpellItem(props) {
         <input
           className="Spell-Item-Editor"
           onChange={onNameInputChanged}
-          value={name}
+          value={props.name}
           autoFocus="autoFocus"
         ></input>
-        <button onClick={() => setEdit(!editing)} className="Spell-Edit-Button">
-          Save
+        <button
+          className="Spell-Edit-Button"
+          onClick={() => props.onEndEdit(props.id)}
+        >
+          Cancel
         </button>
       </div>
     );

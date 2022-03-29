@@ -46,12 +46,13 @@
   background-image: url("../../public/Spellheader.svg");
   background-repeat: no-repeat;
   background-size: stretch;
+  align-items: center;
+  justify-content: center;
 }
 
 .Spell-Level {
   flex: 0;
   padding-left: 20px;
-  justify-content: center;
   width: 50px;
 }
 
@@ -59,7 +60,5 @@
   flex: 1;
   text-align: center;
   font-size: x-large;
-  align-items: center;
-  height: 100%;
   width: 100%;
 }

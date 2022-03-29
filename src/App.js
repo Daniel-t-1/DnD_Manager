@@ -23,7 +23,7 @@ function App() {
   ];
   return (
     <div className="container">
-      <Spells spellType="cantrips" spells={cantrips}></Spells>
+      <Spells spellType="cantrips" spells={cantrips} spellLevel="0"></Spells>
     </div>
   );
 }

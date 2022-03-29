@@ -5,12 +5,15 @@ import PropTypes from "prop-types";
 //collection of rows takes
 export function Spells(props) {
   const spells = props.spells.map((name) => (
-    <SpellItem id={name} name={name} />
+    <SpellItem key={name} name={name} />
   ));
 
   return (
     <div>
-      <SpellHeader name={props.spellType}></SpellHeader>
+      <SpellHeader
+        name={props.spellType}
+        spellLevel={props.spellLevel}
+      ></SpellHeader>
       <div>{spells}</div>
     </div>
   );
@@ -55,7 +58,7 @@ function SpellItem(props) {
 function SpellHeader(props) {
   return (
     <div className="spell-header">
-      <div className="Spell-Level">0</div>
+      <div className="Spell-Level">{props.spellLevel}</div>
       <div className="Spell-Type">{props.name}</div>
     </div>
   );

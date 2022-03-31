@@ -7,7 +7,7 @@ export function ToggleableRadioButton(props) {
 
   function toggle() {
     setEnable(!enabled);
-    //  props.updateChecked(!enabled);
+    props.updateChecked(!enabled);
   }
 
   return (

@@ -29,7 +29,7 @@ export function Spells(props) {
 
   return (
     <div className="Spell-Container">
-      <SpellHeader name={spellType} spellLevel={spellLevel}></SpellHeader>
+      <SpellHeader spell={props.spells}></SpellHeader>
       <div>
         {spells.map((spell, index) => (
           <SpellItem
@@ -60,6 +60,7 @@ function SpellItem(props) {
     props.onSpellchange(props.id, name);
     props.onEndEdit(props.id);
   };
+
   const processCancel = (event) => {
     props.onEndEdit(props.id);
   };
@@ -97,21 +98,25 @@ function SpellItem(props) {
 function SpellHeader(props) {
   return (
     <div className="spell-header">
-      <div className="Spell-Level">{props.spellLevel}</div>
-      <div className="Spell-Type">{props.name}</div>
+      <div className="Spell-Level">{props.spell.level}</div>
+      <div className="Spell-Type">{props.spell.name}</div>
+      <SpellSlots spell={props.spell}></SpellSlots>
     </div>
   );
 }
 
-function Spellslots(props) {
-  return (
-    <>
-      {props.spells.map((spell, index) => (
-        <ToggleableRadioButton
-          updateChecked={() => console.log("updating checked")}
-          enabled={props.spells.slots >= index}
-        ></ToggleableRadioButton>
-      ))}
-    </>
-  );
+function SpellSlots(props) {
+  var buttons = [];
+  console.log(props);
+
+  for (var i = 0; i < props.spell.slots; i++) {
+    buttons.push(
+      <ToggleableRadioButton
+        key={i}
+        enabled={i <= props.spell.remaining}
+      ></ToggleableRadioButton>
+    );
+  }
+
+  return buttons;
 }

@@ -1,16 +1,17 @@
-import "./SpellItem.css";
+import "./Spell.css";
 import React, { useState } from "react";
+import { ToggleableRadioButton } from "../Controls/ToggleableRadioButton";
 
 //collection of rows takes
 export function Spells(props) {
-  const [spells, setSpells] = useState(props.spells);
-  const [spellLevel, setSpellLevel] = useState(props.spellLevel);
-  const [spellType, setSpellType] = useState(props.spellType);
+  const [spells, setSpells] = useState(props.spells.spells);
+  const [spellLevel, setSpellLevel] = useState(props.spells.level);
+  const [spellType, setSpellType] = useState(props.spells.name);
   const [currentlyEditing, setCurrentlyEditing] = useState(-1);
 
   function updateSpellname(id, Name) {
     let oldState = [...spells];
-    oldState[id] = Name;
+    oldState[id] = { ...oldState[id], name: Name };
     setSpells(oldState);
   }
 
@@ -27,14 +28,14 @@ export function Spells(props) {
   }
 
   return (
-    <div>
+    <div className="Spell-Container">
       <SpellHeader name={spellType} spellLevel={spellLevel}></SpellHeader>
       <div>
-        {spells.map((name, index) => (
+        {spells.map((spell, index) => (
           <SpellItem
-            key={name}
+            key={spell.name}
             id={index}
-            name={name}
+            name={spell.name}
             onSpellchange={updateSpellname}
             editing={currentlyEditing === index}
             onBeginEdit={tryBeginEdit}
@@ -47,9 +48,20 @@ export function Spells(props) {
 }
 
 //spell item row
+
 function SpellItem(props) {
+  const [name, setName] = useState(props.name);
+
   const onNameInputChanged = (event) => {
-    props.onSpellchange(props.id, event.target.value);
+    setName(event.target.value);
+  };
+
+  const processSave = (event) => {
+    props.onSpellchange(props.id, name);
+    props.onEndEdit(props.id);
+  };
+  const processCancel = (event) => {
+    props.onEndEdit(props.id);
   };
 
   if (!props.editing) {
@@ -68,13 +80,12 @@ function SpellItem(props) {
         <input
           className="Spell-Item-Editor"
           onChange={onNameInputChanged}
-          value={props.name}
-          autoFocus="autoFocus"
+          value={name}
         ></input>
-        <button
-          className="Spell-Edit-Button"
-          onClick={() => props.onEndEdit(props.id)}
-        >
+        <button className="Spell-Edit-Button" onClick={() => processSave()}>
+          Save
+        </button>
+        <button className="Spell-Edit-Button" onClick={() => processCancel()}>
           Cancel
         </button>
       </div>
@@ -89,5 +100,18 @@ function SpellHeader(props) {
       <div className="Spell-Level">{props.spellLevel}</div>
       <div className="Spell-Type">{props.name}</div>
     </div>
+  );
+}
+
+function Spellslots(props) {
+  return (
+    <>
+      {props.spells.map((spell, index) => (
+        <ToggleableRadioButton
+          updateChecked={() => console.log("updating checked")}
+          enabled={props.spells.slots >= index}
+        ></ToggleableRadioButton>
+      ))}
+    </>
   );
 }

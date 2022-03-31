@@ -1,0 +1,30 @@
+.Radiobutton-On {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  color: white;
+  background-color: white;
+  padding: 4px;
+}
+
+.Radiobutton-Off {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  border-style: solid;
+  border-color: black;
+  color: black;
+  background-color: black;
+  background-clip: content-box; /* support: IE9+ */
+  padding: 4px;
+}
+
+.Radiobutton-Off:hover,
+.Radiobutton-On:hover {
+  cursor: pointer;
+  height: 21px;
+  width: 21px;
+}

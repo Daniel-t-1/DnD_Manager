@@ -84,7 +84,7 @@
   display: flex;
   font-variant: small-caps;
   height: 60px;
-  background-image: url("../../public/Spellheader.svg");
+  background-image: url("../../../public/Spellheader.svg");
   background-repeat: no-repeat;
   background-size: stretch;
   align-items: center;

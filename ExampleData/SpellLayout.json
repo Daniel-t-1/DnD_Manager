@@ -1,0 +1,77 @@
+[
+  {
+    "name": "cantrips",
+    "level":0,
+    "slots": 5,
+    "remaining": 2,
+    "spells": [
+      {
+        "name": "Acid Splash",
+        "level": 0,
+        "school": "Conjuration",
+        "time": "1 action",
+        "range": "60 feet",
+        "components": "V, S",
+        "duration": "Instantaneous",
+        "classes": "Sorcerer, Wizard"
+      },
+      {
+        "name": "Blade Ward",
+        "level": 0,
+        "school": "Abjuration",
+        "time": "1 action",
+        "range": "Self",
+        "components": "V, S",
+        "duration": "Concentration, up to 10 minutes",
+        "classes": "Bard, Sorcerer, Warlock, Wizard"
+      },
+      {
+        "name": "Chill Touch",
+        "level": 0,
+        "school": "Necromancy",
+        "time": "1 action",
+        "range": "120 feet",
+        "components": "V, S",
+        "duration": "Concentration, up to 1 minute",
+        "classes": "Sorcerer, Wizard"
+      },
+      {
+        "name": "Eldritch Blast",
+        "level": 0,
+        "school": "Evocation",
+        "time": "1 action",
+        "range": "120 feet",
+        "components": "V, S",
+        "duration": "Instantaneous",
+        "classes": "Warlock, Wizard"
+      },
+      {
+        "name": "Mage Hand",
+        "level": 0,
+        "school": "Conjuration",
+        "time": "1 action",
+        "range": "30 feet",
+        "components": "V, S",
+        "duration": "Concentration, up to 1 minute",
+        "classes": "Sorcerer, Wizard"
+      },
+      {
+        "name": "Minor Illusion",
+        "level": 0,
+        "school": "Illusion",
+        "time": "1 action",
+        "range": "30 feet",
+        "components": "V, S, M (a bit of fleece)",
+        "duration": "Concentration, up to 1 minute",
+        "classes": "Bard, Sorcerer, Warlock, Wizard"
+      },
+      {
+        "name": "Prestidigitation",
+        "level": 0,
+        "school": "Transmutation",
+        "time": "1 action",
+        "range": "30 feet",
+
+    ]
+  }
+]

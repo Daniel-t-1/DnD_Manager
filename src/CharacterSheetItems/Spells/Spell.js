@@ -7,6 +7,23 @@ export function Spells(props) {
   const [currentlyEditing, setCurrentlyEditing] = useState(-1);
   const [currentlyViewing, setCurrentlyViewing] = useState(-1);
 
+  if (spellGroup.spells.length == 0) {
+    let newstate = { ...spellGroup };
+
+    var blank = {
+      name: "None",
+      level: "",
+      school: "",
+      time: "",
+      range: "",
+      components: "",
+      duration: "",
+      classes: "",
+    };
+    newstate.spells = [blank, blank, blank, blank, blank];
+    setSpellGroup(newstate);
+  }
+
   function updateSpellname(id, Name) {
     let newstate = { ...spellGroup };
     newstate.spells[id].name = Name;
@@ -92,7 +109,7 @@ function SpellItem(props) {
     if (props.viewing) {
       return (
         <>
-          <div className="spell-item-expanded" onClick={onview}>
+          <div className="spell-item-expanded" onClick={handleClick}>
             {props.name}
           </div>
           <div className="spell-item-expanded-base">

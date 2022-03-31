@@ -2,10 +2,10 @@ import "./Spell.css";
 import React, { useState } from "react";
 import { ToggleableRadioButton } from "../Controls/ToggleableRadioButton";
 
-//collection of rows takes
 export function Spells(props) {
   const [spellGroup, setSpellGroup] = useState(props.spells);
   const [currentlyEditing, setCurrentlyEditing] = useState(-1);
+  const [currentlyViewing, setCurrentlyViewing] = useState(-1);
 
   function updateSpellname(id, Name) {
     let newstate = { ...spellGroup };
@@ -22,6 +22,14 @@ export function Spells(props) {
   function tryEndEdit(id) {
     if (currentlyEditing === id) {
       setCurrentlyEditing(-1);
+    }
+  }
+
+  function tryView(id) {
+    if (currentlyViewing === id) {
+      setCurrentlyViewing(-1);
+    } else {
+      setCurrentlyViewing(id);
     }
   }
 
@@ -43,19 +51,19 @@ export function Spells(props) {
             key={spell.name}
             id={index}
             name={spell.name}
+            spell={spell}
             onSpellchange={updateSpellname}
             editing={currentlyEditing === index}
+            viewing={currentlyViewing === index}
             onBeginEdit={tryBeginEdit}
             onEndEdit={tryEndEdit}
+            onView={tryView}
           />
         ))}
       </div>
     </div>
   );
 }
-
-//spell item row
-
 function SpellItem(props) {
   const [name, setName] = useState(props.name);
 
@@ -72,16 +80,38 @@ function SpellItem(props) {
     props.onEndEdit(props.id);
   };
 
+  const onview = (event) => {
+    props.onView(props.id);
+  };
+
+  const handleClick = (e) => {
+    e.detail == 2 ? props.onBeginEdit(props.id) : props.onView(props.id);
+  };
+
   if (!props.editing) {
-    return (
-      <div
-        id={props.id}
-        className="spell-item"
-        onClick={() => props.onBeginEdit(props.id)}
-      >
-        {props.name}
-      </div>
-    );
+    if (props.viewing) {
+      return (
+        <>
+          <div className="spell-item-expanded" onClick={onview}>
+            {props.name}
+          </div>
+          <div className="spell-item-expanded-base">
+            <p>School: {props.spell.school}</p>
+            <p>Casting Time: {props.spell.castingTime}</p>
+            <p>Range: {props.spell.range}</p>
+            <p>Components: {props.spell.components}</p>
+            <p>Duration: {props.spell.duration}</p>
+            <p>{props.spell.description}</p>
+          </div>
+        </>
+      );
+    } else {
+      return (
+        <div id={props.id} className="spell-item" onClick={handleClick}>
+          {props.name}
+        </div>
+      );
+    }
   } else {
     return (
       <div className="Spell-Item-Editor-Row">
@@ -100,8 +130,6 @@ function SpellItem(props) {
     );
   }
 }
-
-//returns spells header
 function SpellHeader(props) {
   const updateSpellSlot = (value) => {
     props.updateSpellSlot(value);
@@ -119,7 +147,6 @@ function SpellHeader(props) {
     </div>
   );
 }
-
 function SpellSlots(props) {
   var buttons = [];
   const updateSpellSlot = (value) => {

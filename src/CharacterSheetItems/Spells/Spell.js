@@ -4,15 +4,13 @@ import { ToggleableRadioButton } from "../Controls/ToggleableRadioButton";
 
 //collection of rows takes
 export function Spells(props) {
-  const [spells, setSpells] = useState(props.spells.spells);
-  const [spellLevel, setSpellLevel] = useState(props.spells.level);
-  const [spellType, setSpellType] = useState(props.spells.name);
+  const [spellGroup, setSpellGroup] = useState(props.spells);
   const [currentlyEditing, setCurrentlyEditing] = useState(-1);
 
   function updateSpellname(id, Name) {
-    let oldState = [...spells];
-    oldState[id] = { ...oldState[id], name: Name };
-    setSpells(oldState);
+    let newstate = { ...spellGroup };
+    newstate.spells[id].name = Name;
+    setSpellGroup(newstate);
   }
 
   function tryBeginEdit(id) {
@@ -27,11 +25,20 @@ export function Spells(props) {
     }
   }
 
+  function updateSpellSlot(increment) {
+    let newstate = { ...spellGroup };
+    newstate.remaining += increment;
+    setSpellGroup(newstate);
+  }
+
   return (
     <div className="Spell-Container">
-      <SpellHeader spell={props.spells}></SpellHeader>
+      <SpellHeader
+        spell={spellGroup}
+        updateSpellSlot={updateSpellSlot}
+      ></SpellHeader>
       <div>
-        {spells.map((spell, index) => (
+        {spellGroup.spells.map((spell, index) => (
           <SpellItem
             key={spell.name}
             id={index}
@@ -96,27 +103,43 @@ function SpellItem(props) {
 
 //returns spells header
 function SpellHeader(props) {
+  const updateSpellSlot = (value) => {
+    props.updateSpellSlot(value);
+  };
+
   return (
     <div className="spell-header">
       <div className="Spell-Level">{props.spell.level}</div>
       <div className="Spell-Type">{props.spell.name}</div>
-      <SpellSlots spell={props.spell}></SpellSlots>
+      <SpellSlots
+        key={props.spell.name}
+        spell={props.spell}
+        updateSpellSlot={(val) => updateSpellSlot(val)}
+      ></SpellSlots>
     </div>
   );
 }
 
 function SpellSlots(props) {
   var buttons = [];
-  console.log(props);
+  const updateSpellSlot = (value) => {
+    if (value) {
+      props.updateSpellSlot(1);
+    } else {
+      props.updateSpellSlot(-1);
+    }
+  };
 
   for (var i = 0; i < props.spell.slots; i++) {
     buttons.push(
       <ToggleableRadioButton
         key={i}
-        enabled={i <= props.spell.remaining}
+        id={i}
+        enabled={i < props.spell.remaining}
+        updateChecked={(val) => updateSpellSlot(val)}
       ></ToggleableRadioButton>
     );
   }
 
-  return buttons;
+  return [buttons];
 }

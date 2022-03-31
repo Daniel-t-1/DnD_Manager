@@ -11,8 +11,8 @@ function App() {
     {
       name: "cantrips",
       level: 0,
-      slots: 5,
-      remaining: 2,
+      slots: 0,
+      remaining: 0,
       spells: [
         {
           name: "Acid Splash",
@@ -382,7 +382,7 @@ function App() {
   return (
     <div className="container">
       {spells.map((spellset, index) => (
-        <Spells spells={spellset}></Spells>
+        <Spells spells={spellset} key={index}></Spells>
       ))}
     </div>
   );

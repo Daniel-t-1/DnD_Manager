@@ -51,9 +51,10 @@
   display: flex;
   font-variant: small-caps;
   height: 60px;
+  width: 100%;
   background-image: url("../../../public/Spellheader.svg");
   background-repeat: no-repeat;
-  background-size: stretch;
+  background-size: contain;
   align-items: center;
   justify-content: center;
 }
@@ -69,4 +70,8 @@
   text-align: center;
   font-size: x-large;
   width: 100%;
+}
+
+.spell-Slot {
+  padding-right: 10px;
 }

@@ -156,11 +156,13 @@ function SpellHeader(props) {
     <div className="spell-header">
       <div className="Spell-Level">{props.spell.level}</div>
       <div className="Spell-Type">{props.spell.name}</div>
-      <SpellSlots
-        key={props.spell.name}
-        spell={props.spell}
-        updateSpellSlot={(val) => updateSpellSlot(val)}
-      ></SpellSlots>
+      <div className="spell-Slot">
+        <SpellSlots
+          key={props.spell.name}
+          spell={props.spell}
+          updateSpellSlot={(val) => updateSpellSlot(val)}
+        ></SpellSlots>
+      </div>
     </div>
   );
 }

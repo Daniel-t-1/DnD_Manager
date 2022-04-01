@@ -3,7 +3,7 @@ import "./ToggleableRadioButton.css";
 
 export function ToggleableRadioButton(props) {
   const toggle = () => {
-    props.updateChecked(!props.enabled);
+    props.updateChecked(!props.enabled, props.id);
   };
 
   return (

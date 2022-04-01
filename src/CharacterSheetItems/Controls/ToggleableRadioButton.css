@@ -8,6 +8,8 @@
   color: white;
   background-color: white;
   padding: 4px;
+  transition-property: width, height;
+  transition-duration: 0.3s;
 }
 
 .Radiobutton-On {
@@ -20,6 +22,8 @@
   background-color: black;
   background-clip: content-box; /* support: IE9+ */
   padding: 4px;
+  transition-property: width, height;
+  transition-duration: 0.3s;
 }
 
 .Radiobutton-Off:hover,
@@ -27,4 +31,6 @@
   cursor: pointer;
   height: 21px;
   width: 21px;
+  transition-property: width, height;
+  transition-duration: 0s;
 }

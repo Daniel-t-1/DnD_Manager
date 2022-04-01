@@ -52,7 +52,7 @@ export function Spells(props) {
 
   function updateSpellSlot(increment) {
     let newstate = { ...spellGroup };
-    newstate.remaining += increment;
+    newstate.remaining = increment;
     setSpellGroup(newstate);
   }
 
@@ -81,6 +81,7 @@ export function Spells(props) {
     </div>
   );
 }
+
 function SpellItem(props) {
   const [name, setName] = useState(props.name);
 
@@ -147,6 +148,7 @@ function SpellItem(props) {
     );
   }
 }
+
 function SpellHeader(props) {
   const updateSpellSlot = (value) => {
     props.updateSpellSlot(value);
@@ -166,13 +168,14 @@ function SpellHeader(props) {
     </div>
   );
 }
+
 function SpellSlots(props) {
   var buttons = [];
-  const updateSpellSlot = (value) => {
-    if (value) {
-      props.updateSpellSlot(1);
+  const updateSpellSlot = (value, id) => {
+    if (!value && props.spell.remaining === id + 1) {
+      props.updateSpellSlot(id);
     } else {
-      props.updateSpellSlot(-1);
+      props.updateSpellSlot(id + 1);
     }
   };
 
@@ -182,7 +185,7 @@ function SpellSlots(props) {
         key={i}
         id={i}
         enabled={i < props.spell.remaining}
-        updateChecked={(val) => updateSpellSlot(val)}
+        updateChecked={(val, id) => updateSpellSlot(val, id)}
       ></ToggleableRadioButton>
     );
   }

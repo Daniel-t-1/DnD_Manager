@@ -1,15 +1,16 @@
 import React from "react";
 import "./ToggleableRadioButton.css";
 
-export function ToggleableRadioButton(props) {
+export function ToggleableRadioButton({ enabled, id, updateChecked }) {
   const toggle = () => {
-    props.updateChecked(!props.enabled, props.id);
+    updateChecked(!enabled, id);
   };
 
   return (
     <button
       type="button"
-      className={props.enabled ? "Radiobutton-On" : "Radiobutton-Off"}
+      data-testid="ToggleableRadioButton"
+      className={enabled ? "Radiobutton-On" : "Radiobutton-Off"}
       onClick={() => toggle()}
     ></button>
   );

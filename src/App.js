@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Spells } from "./CharacterSheetItems/Spells/Spell";
 
@@ -380,7 +379,7 @@ function App() {
   ];
 
   return (
-    <div className="container">
+    <div data-testid="app" className="container">
       {spells.map((spellset, index) => (
         <Spells spells={spellset} key={index}></Spells>
       ))}

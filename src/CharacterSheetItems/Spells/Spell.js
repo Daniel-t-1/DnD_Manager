@@ -2,14 +2,13 @@ import "./Spell.css";
 import React, { useState } from "react";
 import { ToggleableRadioButton } from "../Controls/ToggleableRadioButton";
 
-export function Spells(props) {
-  const [spellGroup, setSpellGroup] = useState(props.spells);
+export function Spells({ spells }) {
+  const [spellGroup, setSpellGroup] = useState(spells);
   const [currentlyEditing, setCurrentlyEditing] = useState(-1);
   const [currentlyViewing, setCurrentlyViewing] = useState(-1);
 
-  if (spellGroup.spells.length == 0) {
+  if (spellGroup == undefined || spellGroup.spells.length == 0) {
     let newstate = { ...spellGroup };
-
     var blank = {
       name: "None",
       level: "",
@@ -65,9 +64,10 @@ export function Spells(props) {
       <div>
         {spellGroup.spells.map((spell, index) => (
           <SpellItem
+            data-testid="spell-item"
             key={spell.name}
             id={index}
-            name={spell.name}
+            spellName={spell.name}
             spell={spell}
             onSpellchange={updateSpellname}
             editing={currentlyEditing === index}
@@ -82,51 +82,61 @@ export function Spells(props) {
   );
 }
 
-function SpellItem(props) {
-  const [name, setName] = useState(props.name);
+function SpellItem({
+  id,
+  spellName,
+  spell,
+  onSpellchange,
+  editing,
+  viewing,
+  onBeginEdit,
+  onEndEdit,
+  onView,
+}) {
+  const [name, setName] = useState(spellName);
 
   const onNameInputChanged = (event) => {
     setName(event.target.value);
   };
 
   const processSave = (event) => {
-    props.onSpellchange(props.id, name);
-    props.onEndEdit(props.id);
+    onSpellchange(id, name);
+    onEndEdit(id);
   };
 
   const processCancel = (event) => {
-    props.onEndEdit(props.id);
+    onEndEdit(id);
   };
 
   const onview = (event) => {
-    props.onView(props.id);
+    onView(id);
   };
 
   const handleClick = (e) => {
-    e.detail == 2 ? props.onBeginEdit(props.id) : props.onView(props.id);
+    e.detail == 2 ? onBeginEdit(id) : onView(id);
   };
 
-  if (!props.editing) {
-    if (props.viewing) {
+  if (!editing) {
+    if (viewing) {
       return (
         <>
           <div className="spell-item-expanded" onClick={handleClick}>
-            {props.name}
+            {spellName}
           </div>
           <div className="spell-item-expanded-base">
-            <p>School: {props.spell.school}</p>
-            <p>Casting Time: {props.spell.castingTime}</p>
-            <p>Range: {props.spell.range}</p>
-            <p>Components: {props.spell.components}</p>
-            <p>Duration: {props.spell.duration}</p>
-            <p>{props.spell.description}</p>
+            <p>School: {spell.school}</p>
+            <p>Casting Time: {spell.castingTime}</p>
+            <p>Range: {spell.range}</p>
+            <p>Components: {spell.components}</p>
+            <p>Duration: {spell.duration}</p>
+            <p>{spell.description}</p>
           </div>
         </>
       );
     } else {
       return (
-        <div id={props.id} className="spell-item" onClick={handleClick}>
-          {props.name}
+        <div id={id} className="spell-item" onClick={handleClick}>
+          {spellName}
         </div>
       );
     }
@@ -149,43 +159,43 @@ function SpellItem(props) {
   }
 }
 
-function SpellHeader(props) {
-  const updateSpellSlot = (value) => {
-    props.updateSpellSlot(value);
+function SpellHeader({ spell, updateSpellSlot }) {
+  const _updateSpellSlot = (value) => {
+    updateSpellSlot(value);
   };
 
   return (
     <div className="spell-header">
-      <div className="Spell-Level">{props.spell.level}</div>
-      <div className="Spell-Type">{props.spell.name}</div>
+      <div className="Spell-Level">{spell.level}</div>
+      <div className="Spell-Type">{spell.name}</div>
       <div className="spell-Slot">
         <SpellSlots
-          key={props.spell.name}
-          spell={props.spell}
-          updateSpellSlot={(val) => updateSpellSlot(val)}
+          key={spell.name}
+          spell={spell}
+          updateSpellSlot={(val) => _updateSpellSlot(val)}
         ></SpellSlots>
       </div>
     </div>
   );
 }
 
-function SpellSlots(props) {
+function SpellSlots({ spell, updateSpellSlot }) {
   var buttons = [];
-  const updateSpellSlot = (value, id) => {
-    if (!value && props.spell.remaining === id + 1) {
-      props.updateSpellSlot(id);
+  const _updateSpellSlot = (value, id) => {
+    if (!value && spell.remaining === id + 1) {
+      updateSpellSlot(id);
     } else {
-      props.updateSpellSlot(id + 1);
+      updateSpellSlot(id + 1);
     }
   };
 
-  for (var i = 0; i < props.spell.slots; i++) {
+  for (var i = 0; i < spell.slots; i++) {
     buttons.push(
       <ToggleableRadioButton
         key={i}
         id={i}
-        enabled={i < props.spell.remaining}
-        updateChecked={(val, id) => updateSpellSlot(val, id)}
+        enabled={i < spell.remaining}
+        updateChecked={(val, id) => _updateSpellSlot(val, id)}
       ></ToggleableRadioButton>
     );
   }

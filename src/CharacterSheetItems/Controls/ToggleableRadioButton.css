@@ -34,3 +34,40 @@
   transition-property: width, height;
   transition-duration: 0s;
 }
+
+.Radiobutton-Small-On:hover,
+.Radiobutton-Small-Off:hover {
+  cursor: pointer;
+  transition-property: width, height;
+  transition-duration: 0s;
+  height: 17px;
+  width: 17px;
+}
+
+.Radiobutton-Small-Off {
+  height: 15px;
+  width: 15px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  color: white;
+  background-color: white;
+  padding: 4px;
+  transition-property: width, height;
+  transition-duration: 0.3s;
+  border-radius: 50%;
+}
+
+.Radiobutton-Small-On {
+  height: 15px;
+  width: 15px;
+  padding: 1.3px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: black;
+  color: black;
+  background-color: black;
+  background-clip: content-box; /* support: IE9+ */
+  transition-property: width, height;
+  transition-duration: 0.3s;
+}

@@ -1,16 +1,18 @@
 import React from "react";
 import "./ToggleableRadioButton.css";
 
-export function ToggleableRadioButton({ enabled, id, updateChecked }) {
+export function ToggleableRadioButton({ enabled, id, updateChecked, size }) {
   const toggle = () => {
     updateChecked(!enabled, id);
   };
+
+  const sizestring = size === "small" ? "Radiobutton-Small" : "Radiobutton";
 
   return (
     <button
       type="button"
       data-testid="ToggleableRadioButton"
-      className={enabled ? "Radiobutton-On" : "Radiobutton-Off"}
+      className={enabled ? sizestring + "-On" : sizestring + "-Off"}
       onClick={() => toggle()}
     ></button>
   );

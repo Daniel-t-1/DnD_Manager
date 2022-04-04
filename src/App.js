@@ -1,5 +1,6 @@
 import "./App.css";
 import { Spells } from "./CharacterSheetItems/Spells/Spell";
+import { CharacterStats } from "./CharacterSheetItems/CharacterStats/CharacterStats.js";
 
 function App() {
   //https://github.com/cynicaloptimist/improved-initiative Gh copilot pulled from here??
@@ -383,6 +384,7 @@ function App() {
       {spells.map((spellset, index) => (
         <Spells spells={spellset} key={index}></Spells>
       ))}
+      <CharacterStats value="1" title="2" modifier="3"></CharacterStats>
     </div>
   );
 }

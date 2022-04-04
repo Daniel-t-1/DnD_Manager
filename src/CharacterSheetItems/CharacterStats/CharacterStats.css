@@ -1,0 +1,57 @@
+.stat-Container {
+  background-color: #c5c6c7;
+  display: flex;
+  padding: 3px;
+  gap: 4px;
+}
+
+.stat-Box {
+  background-color: white;
+  width: 100px;
+  background-image: url("../../../public/StatHeader.svg");
+  background-repeat: no-repeat;
+  height: 90px;
+  border: 1px solid black;
+  padding-bottom: 3px;
+}
+
+.stat-modifier {
+  padding-top: 3px;
+  font-size: xx-large;
+  text-align: center;
+  font-variant: small-caps;
+}
+.stat-title {
+  font-size: medium;
+  font-weight: semi-bold;
+  text-align: center;
+  font-variant: small-caps;
+}
+
+.stat-value {
+  padding-top: 3px;
+  font-weight: semi-bold;
+  font-size: medium;
+  text-align: center;
+  font-variant: small-caps;
+}
+
+.skill-box {
+  align-items: center;
+  font-variant: small-caps;
+  display: flex;
+  font-variant: small-caps;
+  gap: 5px;
+}
+
+.skill-Value {
+  border-style: none;
+  border-bottom: solid 1px black;
+  background-color: #ced1dc;
+  padding: 2px;
+  width: 3ch;
+}
+
+.skill-Name {
+  font-size: large;
+}

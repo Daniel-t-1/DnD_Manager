@@ -31,3 +31,16 @@ test("Snapshot testing button Off", () => {
   const { asFragment } = render(<ToggleableRadioButton enabled={false} />);
   expect(asFragment()).toMatchSnapshot();
 });
+
+test("Snapshot testing small button Off", () => {
+  const { asFragment } = render(
+    <ToggleableRadioButton enabled={false} size="small" />
+  );
+  expect(asFragment()).toMatchSnapshot();
+});
+test("Snapshot testing Small button On", () => {
+  const { asFragment } = render(
+    <ToggleableRadioButton enabled={true} size="small" />
+  );
+  expect(asFragment()).toMatchSnapshot();
+});

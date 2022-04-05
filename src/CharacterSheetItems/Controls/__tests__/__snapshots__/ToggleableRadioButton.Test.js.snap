@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Snapshot testing Small button On 1`] = `
+<DocumentFragment>
+  <button
+    class="Radiobutton-Small-On"
+    data-testid="ToggleableRadioButton"
+    type="button"
+  />
+</DocumentFragment>
+`;
+
 exports[`Snapshot testing button Off 1`] = `
 <DocumentFragment>
   <button
@@ -14,6 +24,16 @@ exports[`Snapshot testing button On 1`] = `
 <DocumentFragment>
   <button
     class="Radiobutton-On"
+    data-testid="ToggleableRadioButton"
+    type="button"
+  />
+</DocumentFragment>
+`;
+
+exports[`Snapshot testing small button Off 1`] = `
+<DocumentFragment>
+  <button
+    class="Radiobutton-Small-Off"
     data-testid="ToggleableRadioButton"
     type="button"
   />

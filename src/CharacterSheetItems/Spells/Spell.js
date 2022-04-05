@@ -5,7 +5,7 @@ import { ToggleableRadioButton } from "../Controls/ToggleableRadioButton";
 export function Spells({ spells }) {
   const [spellGroup, setSpellGroup] = useState(spells);
   const [currentlyEditing, setCurrentlyEditing] = useState(-1);
-  const [currentlyViewing, setCurrentlyViewing] = useState(-1);
+  const [currentlyViewing, setCurrentlyViewing] = useState([]);
 
   if (spellGroup.spells === undefined || spellGroup.spells.length === 0) {
     let newstate = { ...spellGroup };
@@ -42,11 +42,14 @@ export function Spells({ spells }) {
   }
 
   function tryView(id) {
-    if (currentlyViewing === id) {
-      setCurrentlyViewing(-1);
+    const index = currentlyViewing.indexOf(id);
+    let updatedViewing = [...currentlyViewing];
+    if (index > -1) {
+      updatedViewing.splice(index, 1);
     } else {
-      setCurrentlyViewing(id);
+      updatedViewing.push(id);
     }
+    setCurrentlyViewing(updatedViewing);
   }
 
   function updateSpellSlot(increment) {
@@ -71,7 +74,7 @@ export function Spells({ spells }) {
             spell={spell}
             onSpellchange={updateSpellname}
             editing={currentlyEditing === index}
-            viewing={currentlyViewing === index}
+            viewing={currentlyViewing.includes(index)}
             onBeginEdit={tryBeginEdit}
             onEndEdit={tryEndEdit}
             onView={tryView}
@@ -117,29 +120,28 @@ function SpellItem({
   };
 
   if (!editing) {
-    if (viewing) {
-      return (
-        <>
-          <div className="spell-item-expanded" onClick={handleClick}>
-            {spellName}
-          </div>
-          <div className="spell-item-expanded-base">
-            <p>School: {spell.school}</p>
-            <p>Casting Time: {spell.castingTime}</p>
-            <p>Range: {spell.range}</p>
-            <p>Components: {spell.components}</p>
-            <p>Duration: {spell.duration}</p>
-            <p>{spell.description}</p>
-          </div>
-        </>
-      );
-    } else {
-      return (
-        <div id={id} className="spell-item" onClick={handleClick}>
+    return (
+      <>
+        <div
+          className={viewing ? "spell-item-expanded" : "spell-item"}
+          onClick={handleClick}
+        >
           {spellName}
         </div>
-      );
-    }
+        <div
+          className={
+            viewing ? "spell-item-expanded-base" : "spell-item-collapsed-base"
+          }
+        >
+          <p>School: {spell.school}</p>
+          <p>Casting Time: {spell.castingTime}</p>
+          <p>Range: {spell.range}</p>
+          <p>Components: {spell.components}</p>
+          <p>Duration: {spell.duration}</p>
+          <p>{spell.description}</p>
+        </div>
+      </>
+    );
   } else {
     return (
       <div className="Spell-Item-Editor-Row">

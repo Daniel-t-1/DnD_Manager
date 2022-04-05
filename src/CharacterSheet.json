@@ -9,133 +9,133 @@
   "Stats": {
     "Strength": {
       "value": 14,
-      "Modifier": 2,
+      "modifier": 2,
       "skills": {
         "Athletics": {
           "Proficiency": true,
-          "Value": 4
+          "value": 4
         },
         "savingThrow": {
           "Proficiency": false,
-          "Value": 2
+          "value": 2
         }
       }
     },
     "Dexterity": {
       "value": 12,
-      "Modifier": 1,
+      "modifier": 1,
       "skills": {
         "Acrobatics": {
           "Proficiency": false,
-          "Value": 1
+          "value": 1
         },
         "sleightOfHand": {
           "Proficiency": false,
-          "Value": 1
+          "value": 1
         },
         "stealth": {
           "Proficiency": false,
-          "Value": 1
+          "value": 1
         },
         "savingThrow": {
           "Proficiency": false,
-          "Value": 1
+          "value": 1
         }
       }
     },
     "Constitution": {
       "value": 17,
-      "Modifier": 3,
+      "modifier": 3,
       "skills": {
         "savingThrow": {
           "Proficiency": false,
-          "Value": 3
+          "value": 3
         }
       }
     },
     "Intelligence": {
       "value": 11,
-      "Modifier": 0,
+      "modifier": 0,
       "skills": {
         "arcana": {
           "Proficiency": false,
-          "Value": 0
+          "value": 0
         },
         "history": {
           "Proficiency": false,
-          "Value": 0
+          "value": 0
         },
         "investigation": {
           "Proficiency": false,
-          "Value": 0
+          "value": 0
         },
         "nature": {
           "Proficiency": false,
-          "Value": 0
+          "value": 0
         },
         "religion": {
           "Proficiency": false,
-          "Value": 0
+          "value": 0
         },
         "savingThrow": {
           "Proficiency": false,
-          "Value": 0
+          "value": 0
         }
       }
     },
     "Wisdom": {
       "value": 17,
-      "Modifier": 3,
+      "modifier": 3,
       "skills": {
         "insight": {
           "Proficiency": false,
-          "Value": 3
+          "value": 3
         },
         "medicine": {
           "Proficiency": true,
-          "Value": 5
+          "value": 5
         },
         "perception": {
           "Proficiency": true,
-          "Value": 5
+          "value": 5
         },
         "survival": {
           "Proficiency": false,
-          "Value": 3
+          "value": 3
         },
         "animalHandling": {
           "Proficiency": false,
-          "Value": 3
+          "value": 3
         },
         "savingThrow": {
           "Proficiency": false,
-          "Value": 5
+          "value": 5
         }
       }
     },
     "Charisma": {
       "value": 13,
-      "Modifier": 1,
+      "modifier": 1,
       "skills": {
         "deception": {
           "Proficiency": false,
-          "Value": 1
+          "value": 1
         },
         "intimidation": {
           "Proficiency": false,
-          "Value": 1
+          "value": 1
         },
         "performance": {
           "Proficiency": false,
-          "Value": 1
+          "value": 1
         },
         "persuasion": {
           "Proficiency": true,
-          "Value": 3
+          "value": 3
         },
         "savingThrow": {
           "Proficiency": true,
-          "Value": 3
+          "value": 3
         }
       }
     }
@@ -153,67 +153,67 @@
       {
         "name": "BackPack",
         "Description": "",
-        "Value": "0gp",
+        "value": "0gp",
         "weight": 0
       },
       {
         "name": "Blanket",
         "Description": "",
-        "Value": "0gp",
+        "value": "0gp",
         "weight": 0
       },
       {
         "name": "10 Candles",
         "Description": "",
-        "Value": "0gp",
+        "value": "0gp",
         "weight": 0
       },
       {
         "name": "TinderBox",
         "Description": "",
-        "Value": "0gp",
+        "value": "0gp",
         "weight": 0
       },
       {
         "name": "Alms Box",
         "Description": "",
-        "Value": "0gp",
+        "value": "0gp",
         "weight": 0
       },
       {
         "name": "2 blocks of incense",
         "Description": "",
-        "Value": "0gp",
+        "value": "0gp",
         "weight": 0
       },
       {
         "name": "censer",
         "Description": "",
-        "Value": "0gp",
+        "value": "0gp",
         "weight": 0
       },
       {
         "name": "vestments 2 days of rations ",
         "Description": "",
-        "Value": "0gp",
+        "value": "0gp",
         "weight": 0
       },
       {
         "name": "waterskin",
         "Description": "",
-        "Value": "0gp",
+        "value": "0gp",
         "weight": 0
       },
       {
         "name": "Sheild",
         "Description": "",
-        "Value": "0gp",
+        "value": "0gp",
         "weight": 0
       },
       {
         "name": "Holy symbol (tankard)",
         "Description": "",
-        "Value": "0gp",
+        "value": "0gp",
         "weight": 0
       }
     ]
@@ -278,7 +278,7 @@
   "ClassResources": [
     {
       "name": "",
-      "Value": "",
+      "value": "",
       "Description": "",
       "Uses": 0
     }

@@ -11,8 +11,15 @@ function App() {
       {CharacterSheetData.spells.map((spellset) => (
         <Spells spells={spellset} key={spellset.name}></Spells>
       ))}
-
-      <CharacterStats value="1" title="2" modifier="3"></CharacterStats>
+      {Object.keys(CharacterSheetData.Stats).map((key) => (
+        <CharacterStats
+          key={key}
+          title={key}
+          value={CharacterSheetData.Stats[key].value}
+          modifier={CharacterSheetData.Stats[key].modifier}
+          skills={CharacterSheetData.Stats[key].skills}
+        ></CharacterStats>
+      ))}
     </div>
   );
 }

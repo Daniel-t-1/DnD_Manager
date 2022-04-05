@@ -15,17 +15,7 @@ export function CharacterStats({ title, value, modifier, skills }) {
   return (
     <div className="stat-Container">
       <MainStat value={value} title={title} modifier={modifier}></MainStat>
-      <Skills
-        skills={[
-          { name: "test", value: 10, Proficiency: false },
-          { name: "test", value: 10, Proficiency: false },
-          { name: "test", value: 10, Proficiency: false },
-          { name: "test", value: 10, Proficiency: false },
-          { name: "test", value: 10, Proficiency: false },
-          { name: "test", value: 10, Proficiency: false },
-        ]}
-        updateSkill={updateSkill}
-      ></Skills>
+      <Skills skills={skills} updateSkill={updateSkill}></Skills>
     </div>
   );
 }
@@ -43,18 +33,22 @@ function MainStat({ title, value, modifier }) {
 
 //list of skills
 function Skills({ skills, updateSkill }) {
-  return (
-    <div className="skills-container">
-      {skills.map((skill) => (
-        <Skill
-          skillName={skill.name}
-          skillValue={skill.value}
-          skillProficiency={skill.Proficiency}
-          updateSkill={updateSkill}
-        />
-      ))}
-    </div>
-  );
+  if (skills === undefined || skills.length === 0) {
+    return <b>NO DATA</b>;
+  } else {
+    return (
+      <div className="skills-container">
+        {Object.keys(skills).map((skill) => (
+          <Skill
+            skillName={skill}
+            skillValue={skills[skill].value}
+            skillProficiency={skills[skill].Proficiency}
+            updateSkill={updateSkill}
+          />
+        ))}
+      </div>
+    );
+  }
 }
 
 //individual skill item

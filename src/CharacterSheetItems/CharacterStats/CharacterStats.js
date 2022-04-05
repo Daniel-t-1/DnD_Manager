@@ -1,6 +1,6 @@
 import React from "react";
 import "./CharacterStats.css";
-import { ToggleableRadioButton } from "../Controls/ToggleableRadioButton";
+import { ToggleableRadioButton } from "../../Controls/ToggleableRadioButton";
 
 export function CharacterStats({ title, value, modifier, skills }) {
   const updateSkill = (skillName, skillValue, skillProficiency) => {

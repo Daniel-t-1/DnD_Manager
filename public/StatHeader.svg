@@ -24,25 +24,60 @@
      inkscape:document-units="mm"
      showgrid="false"
      width="26.45833mm"
-     inkscape:zoom="3.1108586"
-     inkscape:cx="219.87499"
-     inkscape:cy="131.47496"
+     inkscape:zoom="8.7988368"
+     inkscape:cx="64.553987"
+     inkscape:cy="52.279638"
      inkscape:window-width="2560"
      inkscape:window-height="1377"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true">
+    <sodipodi:guide
+       position="26.22127,18.820836"
+       orientation="0,-1"
+       id="guide2322" />
+    <sodipodi:guide
+       position="1.0471719,1.4991253"
+       orientation="0,-1"
+       id="guide2523" />
+    <sodipodi:guide
+       position="0.17209478,21.602225"
+       orientation="1,0"
+       id="guide2819" />
+    <sodipodi:guide
+       position="26.286235,21.602225"
+       orientation="1,0"
+       id="guide2821" />
+    <sodipodi:guide
+       position="0.17209478,0.17209315"
+       orientation="0,-1"
+       id="guide2825" />
+  </sodipodi:namedview>
   <defs
      id="defs2" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.328904;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect874"
+       width="26.11414"
+       height="21.430132"
+       x="0.17209478"
+       y="2.2102749"
+       ry="3.7343853" />
     <path
        sodipodi:type="star"
-       style="fill:none;fill-opacity:0.112903;stroke:#000000;stroke-width:1.68672;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.0921659"
-       id="path11922"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path11919"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="19.6875"
@@ -53,7 +88,7 @@
        sodipodi:arg2="0.87497814"
        inkscape:rounded="0"
        inkscape:randomized="-0.001"
-       transform="matrix(0.08547959,-0.53919396,-0.92028304,-0.05008252,41.983234,16.015365)"
+       transform="matrix(0.09830038,-0.59850639,-1.0583132,-0.05559168,46.344294,16.91596)"
        d="m 25.372024,28.505415 -0.933954,10.426338 -3.475913,1.61491 -8.572894,-6.021427 0.345082,-3.832715 9.507076,-4.397246 z" />
     <path
        sodipodi:type="star"
@@ -69,12 +104,12 @@
        sodipodi:arg2="0.87497814"
        inkscape:rounded="0"
        inkscape:randomized="-0.001"
-       transform="matrix(0.09830038,-0.59850639,-1.0583132,-0.05559168,46.344294,17.347111)"
+       transform="matrix(0.09830038,-0.59850639,-1.0583132,-0.05559168,46.344294,16.91596)"
        d="m 25.372024,28.505415 -0.933954,10.426338 -3.475913,1.61491 -8.572894,-6.021427 0.345082,-3.832715 9.507076,-4.397246 z" />
     <path
        sodipodi:type="star"
-       style="fill:none;fill-opacity:0.112903;stroke:#000000;stroke-width:0.377953;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path11919"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.68672;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.0921659"
+       id="path11922"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="19.6875"
@@ -85,7 +120,15 @@
        sodipodi:arg2="0.87497814"
        inkscape:rounded="0"
        inkscape:randomized="-0.001"
-       transform="matrix(0.09830038,-0.59850639,-1.0583132,-0.05559168,46.344294,17.347111)"
+       transform="matrix(0.08547959,-0.53919396,-0.92028304,-0.05008252,41.983234,15.584214)"
        d="m 25.372024,28.505415 -0.933954,10.426338 -3.475913,1.61491 -8.572894,-6.021427 0.345082,-3.832715 9.507076,-4.397246 z" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0.17209477,4.9916643 H 8.403319"
+       id="path2439" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 17.778245,4.9916643 h 8.386269"
+       id="path2441" />
   </g>
 </svg>

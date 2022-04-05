@@ -1,0 +1,6 @@
+.grey-back-ground-border {
+  background-color: #c5c6c7;
+  outline: white solid 2px;
+  outline-offset: -5px;
+  padding: 10px;
+}

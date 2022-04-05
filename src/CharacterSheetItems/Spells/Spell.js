@@ -1,6 +1,6 @@
 import "./Spell.css";
 import React, { useState } from "react";
-import { ToggleableRadioButton } from "../Controls/ToggleableRadioButton";
+import { ToggleableRadioButton } from "../../Controls/ToggleableRadioButton";
 
 export function Spells({ spells }) {
   const [spellGroup, setSpellGroup] = useState(spells);

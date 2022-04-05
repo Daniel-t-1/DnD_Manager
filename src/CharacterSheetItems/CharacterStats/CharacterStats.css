@@ -1,5 +1,5 @@
 .stat-Container {
-  background-color: #c5c6c7;
+  /* background-color: #c5c6c7; */
   display: flex;
   padding: 3px;
   gap: 4px;
@@ -7,13 +7,12 @@
 }
 
 .stat-Box {
-  background-color: white;
-  width: 100px;
+  width: 120px;
   background-image: url("../../../public/StatHeader.svg");
   background-repeat: no-repeat;
+  background-size: 100% 100%;
   height: 90px;
-  border: 1px solid black;
-  padding-bottom: 3px;
+  padding-bottom: 9px;
 }
 
 .stat-modifier {
@@ -24,7 +23,7 @@
 }
 .stat-title {
   font-size: medium;
-  font-weight: semi-bold;
+  font-weight: 500;
   text-align: center;
   font-variant: small-caps;
 }

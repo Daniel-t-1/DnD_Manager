@@ -7,7 +7,7 @@ export function Spells({ spells }) {
   const [currentlyEditing, setCurrentlyEditing] = useState(-1);
   const [currentlyViewing, setCurrentlyViewing] = useState(-1);
 
-  if (spellGroup == undefined || spellGroup.spells.length == 0) {
+  if (spellGroup.spells === undefined || spellGroup.spells.length === 0) {
     let newstate = { ...spellGroup };
     var blank = {
       name: "None",
@@ -65,7 +65,7 @@ export function Spells({ spells }) {
         {spellGroup.spells.map((spell, index) => (
           <SpellItem
             data-testid="spell-item"
-            key={spell.name}
+            key={index}
             id={index}
             spellName={spell.name}
             spell={spell}

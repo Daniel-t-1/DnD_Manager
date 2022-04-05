@@ -3,11 +3,11 @@ import "./CharacterStats.css";
 import { ToggleableRadioButton } from "../Controls/ToggleableRadioButton";
 
 export function CharacterStats({ title, value, modifier, skills }) {
-  const updateSkill = (skillName, skillValue, skillTagged) => {
+  const updateSkill = (skillName, skillValue, skillProficiency) => {
     skills.forEach((skill) => {
       if (skill.name === skillName) {
         skill.value = skillValue;
-        skill.tagged = skillTagged;
+        skill.Proficiency = skillProficiency;
       }
     });
   };
@@ -17,12 +17,12 @@ export function CharacterStats({ title, value, modifier, skills }) {
       <MainStat value={value} title={title} modifier={modifier}></MainStat>
       <Skills
         skills={[
-          { name: "test", value: 10, tagged: false },
-          { name: "test", value: 10, tagged: false },
-          { name: "test", value: 10, tagged: false },
-          { name: "test", value: 10, tagged: false },
-          { name: "test", value: 10, tagged: false },
-          { name: "test", value: 10, tagged: false },
+          { name: "test", value: 10, Proficiency: false },
+          { name: "test", value: 10, Proficiency: false },
+          { name: "test", value: 10, Proficiency: false },
+          { name: "test", value: 10, Proficiency: false },
+          { name: "test", value: 10, Proficiency: false },
+          { name: "test", value: 10, Proficiency: false },
         ]}
         updateSkill={updateSkill}
       ></Skills>
@@ -49,7 +49,7 @@ function Skills({ skills, updateSkill }) {
         <Skill
           skillName={skill.name}
           skillValue={skill.value}
-          skillTagged={skill.tagged}
+          skillProficiency={skill.Proficiency}
           updateSkill={updateSkill}
         />
       ))}
@@ -58,9 +58,9 @@ function Skills({ skills, updateSkill }) {
 }
 
 //individual skill item
-function Skill({ skillName, skillValue, skillTagged, updateSkill }) {
+function Skill({ skillName, skillValue, skillProficiency, updateSkill }) {
   const _updateSkill = () => {
-    updateSkill(skillName, skillValue, skillTagged);
+    updateSkill(skillName, skillValue, skillProficiency);
   };
 
   function onChange(e) {
@@ -71,7 +71,7 @@ function Skill({ skillName, skillValue, skillTagged, updateSkill }) {
     <div className="skill-box">
       <ToggleableRadioButton
         size="small"
-        enabled={skillTagged}
+        enabled={skillProficiency}
         id={skillName}
       ></ToggleableRadioButton>
       <input

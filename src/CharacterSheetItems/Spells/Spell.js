@@ -5,7 +5,7 @@ import { ToggleableRadioButton } from "../Controls/ToggleableRadioButton";
 export function Spells({ spells }) {
   const [spellGroup, setSpellGroup] = useState(spells);
   const [currentlyEditing, setCurrentlyEditing] = useState(-1);
-  const [currentlyViewing, setCurrentlyViewing] = useState({});
+  const [currentlyViewing, setCurrentlyViewing] = useState([]);
 
   if (spellGroup == undefined || spellGroup.spells.length == 0) {
     let newstate = { ...spellGroup };
@@ -42,13 +42,14 @@ export function Spells({ spells }) {
   }
 
   function tryView(id) {
-    if (id in currentlyViewing) {
-      let tempViewing = { ...currentlyViewing };
-      delete tempViewing[id];
-      setCurrentlyViewing(tempViewing);
+    const index = currentlyViewing.indexOf(id);
+    let updatedViewing = [...currentlyViewing];
+    if (index > -1) {
+      updatedViewing.splice(index, 1);
     } else {
-      setCurrentlyViewing({ ...currentlyViewing, [id]: true });
+      updatedViewing.push(id);
     }
+    setCurrentlyViewing(updatedViewing);
   }
 
   function updateSpellSlot(increment) {
@@ -73,7 +74,7 @@ export function Spells({ spells }) {
             spell={spell}
             onSpellchange={updateSpellname}
             editing={currentlyEditing === index}
-            viewing={index in currentlyViewing}
+            viewing={currentlyViewing.includes(index)}
             onBeginEdit={tryBeginEdit}
             onEndEdit={tryEndEdit}
             onView={tryView}

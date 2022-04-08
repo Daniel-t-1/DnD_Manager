@@ -17,7 +17,7 @@ export function Spells({ spells }) {
       range: "",
       components: "",
       duration: "",
-      classes: "",
+      classes: ""
     };
     newstate.spells = [blank, blank, blank, blank, blank];
     setSpellGroup(newstate);
@@ -59,7 +59,7 @@ export function Spells({ spells }) {
   }
 
   return (
-    <div className="Spell-Container">
+    <div className="spell-container">
       <SpellHeader
         spell={spellGroup}
         updateSpellSlot={updateSpellSlot}
@@ -94,7 +94,7 @@ function SpellItem({
   viewing,
   onBeginEdit,
   onEndEdit,
-  onView,
+  onView
 }) {
   const [name, setName] = useState(spellName);
 
@@ -123,14 +123,14 @@ function SpellItem({
     return (
       <>
         <div
-          className={viewing ? "spell-item-expanded" : "spell-item"}
+          className={viewing ? "spell-item--expanded" : "spell-item"}
           onClick={handleClick}
         >
           {spellName}
         </div>
         <div
           className={
-            viewing ? "spell-item-expanded-base" : "spell-item-collapsed-base"
+            viewing ? "spell-item--expanded-base" : "spell-item-collapsed-base"
           }
         >
           <p>School: {spell.school}</p>
@@ -144,16 +144,16 @@ function SpellItem({
     );
   } else {
     return (
-      <div className="Spell-Item-Editor-Row">
+      <div className="spell-item-editor-row">
         <input
-          className="Spell-Item-Editor"
+          className="spell-item-editor"
           onChange={onNameInputChanged}
           value={name}
         ></input>
-        <button className="Spell-Edit-Button" onClick={() => processSave()}>
+        <button className="Spell-edit-button" onClick={() => processSave()}>
           Save
         </button>
-        <button className="Spell-Edit-Button" onClick={() => processCancel()}>
+        <button className="spell-edit-button" onClick={() => processCancel()}>
           Cancel
         </button>
       </div>
@@ -168,9 +168,9 @@ function SpellHeader({ spell, updateSpellSlot }) {
 
   return (
     <div className="spell-header">
-      <div className="Spell-Level">{spell.level}</div>
-      <div className="Spell-Type">{spell.name}</div>
-      <div className="spell-Slot">
+      <div className="spell-level">{spell.level}</div>
+      <div className="spell-type">{spell.name}</div>
+      <div className="spell-slot">
         <SpellSlots
           key={spell.name}
           spell={spell}

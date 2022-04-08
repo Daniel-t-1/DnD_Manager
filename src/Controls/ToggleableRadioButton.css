@@ -1,4 +1,4 @@
-.Radiobutton-Off {
+.radiobutton--off {
   border-radius: 50%;
   height: 20px;
   width: 20px;
@@ -12,7 +12,7 @@
   transition-duration: 0.3s;
 }
 
-.Radiobutton-On {
+.radiobutton--on {
   border-radius: 50%;
   height: 20px;
   width: 20px;
@@ -26,8 +26,8 @@
   transition-duration: 0.3s;
 }
 
-.Radiobutton-Off:hover,
-.Radiobutton-On:hover {
+.radiobutton--off:hover,
+.radiobutton--on:hover {
   cursor: pointer;
   height: 21px;
   width: 21px;
@@ -35,8 +35,8 @@
   transition-duration: 0s;
 }
 
-.Radiobutton-Small-On:hover,
-.Radiobutton-Small-Off:hover {
+.radiobutton-small--on:hover,
+.radiobutton-small--off:hover {
   cursor: pointer;
   transition-property: width, height;
   transition-duration: 0s;
@@ -44,7 +44,7 @@
   width: 17px;
 }
 
-.Radiobutton-Small-Off {
+.radiobutton-small--off {
   height: 15px;
   width: 15px;
   border-style: solid;
@@ -58,7 +58,7 @@
   border-radius: 50%;
 }
 
-.Radiobutton-Small-On {
+.radiobutton-small--on {
   height: 15px;
   width: 15px;
   padding: 2px;

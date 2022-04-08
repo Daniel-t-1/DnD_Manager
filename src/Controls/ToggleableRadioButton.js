@@ -6,13 +6,13 @@ export function ToggleableRadioButton({ enabled, id, updateChecked, size }) {
     updateChecked(!enabled, id);
   };
 
-  const sizestring = size === "small" ? "Radiobutton-Small" : "Radiobutton";
+  const sizestring = size === "small" ? "radiobutton-small" : "radiobutton";
 
   return (
     <button
       type="button"
       data-testid="ToggleableRadioButton"
-      className={enabled ? sizestring + "-On" : sizestring + "-Off"}
+      className={enabled ? sizestring + "--on" : sizestring + "--off"}
       onClick={() => toggle()}
     ></button>
   );

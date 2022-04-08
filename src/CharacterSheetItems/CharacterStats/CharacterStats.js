@@ -23,7 +23,7 @@ export function CharacterStats({ title, value, modifier, skills }) {
 //Main square with value and modifier
 function MainStat({ title, value, modifier }) {
   return (
-    <div className="stat-Box">
+    <div className="stat-box">
       <div className="stat-value">{value}</div>
       <div className="stat-modifier">{modifier}</div>
       <div className="stat-title">{title}</div>
@@ -70,10 +70,10 @@ function Skill({ skillName, skillValue, skillProficiency, updateSkill }) {
       ></ToggleableRadioButton>
       <input
         type="text"
-        className="skill-Value"
+        className="skill-value"
         defaultValue={skillValue}
       ></input>
-      <div className="skill-Name">{skillName}</div>
+      <div className="skill-name">{skillName}</div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-.stat-Container {
+.stat-container {
   /* background-color: #c5c6c7; */
   display: flex;
   padding: 3px;
@@ -6,7 +6,7 @@
   height: 160px;
 }
 
-.stat-Box {
+.stat-box {
   width: 120px;
   background-image: url("../../../public/StatHeader.svg");
   background-repeat: no-repeat;
@@ -44,7 +44,7 @@
   gap: 5px;
 }
 
-.skill-Value {
+.skill-value {
   border-style: none;
   border-bottom: solid 1px black;
   background-color: #ced1dc;
@@ -52,6 +52,6 @@
   width: 3ch;
 }
 
-.skill-Name {
+.skill-name {
   font-size: large;
 }

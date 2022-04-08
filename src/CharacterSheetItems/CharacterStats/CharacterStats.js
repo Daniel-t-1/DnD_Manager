@@ -13,7 +13,7 @@ export function CharacterStats({ title, value, modifier, skills }) {
   };
 
   return (
-    <div className="stat-Container">
+    <div className="stat-container">
       <MainStat value={value} title={title} modifier={modifier}></MainStat>
       <Skills skills={skills} updateSkill={updateSkill}></Skills>
     </div>

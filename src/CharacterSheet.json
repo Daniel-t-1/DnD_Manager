@@ -1,0 +1,578 @@
+{
+  "CharacterName": "Oskar HillBorn",
+  "Class": "Clerick",
+  "Background": "Sailor",
+  "PlayerName": "Daniel",
+  "Alignment": "Chaotic neutral",
+  "ExperiencePoints": "0",
+  "level": "1",
+  "Stats": {
+    "Strength": {
+      "value": 14,
+      "modifier": 2,
+      "skills": {
+        "Athletics": {
+          "Proficiency": true,
+          "value": 4
+        },
+        "Saving Throw": {
+          "Proficiency": false,
+          "value": 2
+        }
+      }
+    },
+    "Dexterity": {
+      "value": 12,
+      "modifier": 1,
+      "skills": {
+        "Acrobatics": {
+          "Proficiency": false,
+          "value": 1
+        },
+        "Sleight Of Hand": {
+          "Proficiency": false,
+          "value": 1
+        },
+        "stealth": {
+          "Proficiency": false,
+          "value": 1
+        },
+        "Saving Throw": {
+          "Proficiency": false,
+          "value": 1
+        }
+      }
+    },
+    "Constitution": {
+      "value": 17,
+      "modifier": 3,
+      "skills": {
+        "Saving Throw": {
+          "Proficiency": false,
+          "value": 3
+        }
+      }
+    },
+    "Intelligence": {
+      "value": 11,
+      "modifier": 0,
+      "skills": {
+        "arcana": {
+          "Proficiency": false,
+          "value": 0
+        },
+        "history": {
+          "Proficiency": false,
+          "value": 0
+        },
+        "investigation": {
+          "Proficiency": false,
+          "value": 0
+        },
+        "nature": {
+          "Proficiency": false,
+          "value": 0
+        },
+        "religion": {
+          "Proficiency": false,
+          "value": 0
+        },
+        "Saving Throw": {
+          "Proficiency": false,
+          "value": 0
+        }
+      }
+    },
+    "Wisdom": {
+      "value": 17,
+      "modifier": 3,
+      "skills": {
+        "insight": {
+          "Proficiency": false,
+          "value": 3
+        },
+        "medicine": {
+          "Proficiency": true,
+          "value": 5
+        },
+        "perception": {
+          "Proficiency": true,
+          "value": 5
+        },
+        "survival": {
+          "Proficiency": false,
+          "value": 3
+        },
+        "animalHandling": {
+          "Proficiency": false,
+          "value": 3
+        },
+        "Saving Throw": {
+          "Proficiency": false,
+          "value": 5
+        }
+      }
+    },
+    "Charisma": {
+      "value": 13,
+      "modifier": 1,
+      "skills": {
+        "deception": {
+          "Proficiency": false,
+          "value": 1
+        },
+        "intimidation": {
+          "Proficiency": false,
+          "value": 1
+        },
+        "performance": {
+          "Proficiency": false,
+          "value": 1
+        },
+        "persuasion": {
+          "Proficiency": true,
+          "value": 3
+        },
+        "Saving Throw": {
+          "Proficiency": true,
+          "value": 3
+        }
+      }
+    }
+  },
+  "proficiencyBonus": 2,
+  "PassiveWisdom": 12,
+  "Equipment": {
+    "CurrentWeight": 0,
+    "MaxWeight": 0,
+    "cp": 0,
+    "sp": 0,
+    "gp": 0,
+    "pp": 0,
+    "Items": [
+      {
+        "name": "BackPack",
+        "Description": "",
+        "value": "0gp",
+        "weight": 0
+      },
+      {
+        "name": "Blanket",
+        "Description": "",
+        "value": "0gp",
+        "weight": 0
+      },
+      {
+        "name": "10 Candles",
+        "Description": "",
+        "value": "0gp",
+        "weight": 0
+      },
+      {
+        "name": "TinderBox",
+        "Description": "",
+        "value": "0gp",
+        "weight": 0
+      },
+      {
+        "name": "Alms Box",
+        "Description": "",
+        "value": "0gp",
+        "weight": 0
+      },
+      {
+        "name": "2 blocks of incense",
+        "Description": "",
+        "value": "0gp",
+        "weight": 0
+      },
+      {
+        "name": "censer",
+        "Description": "",
+        "value": "0gp",
+        "weight": 0
+      },
+      {
+        "name": "vestments 2 days of rations ",
+        "Description": "",
+        "value": "0gp",
+        "weight": 0
+      },
+      {
+        "name": "waterskin",
+        "Description": "",
+        "value": "0gp",
+        "weight": 0
+      },
+      {
+        "name": "Sheild",
+        "Description": "",
+        "value": "0gp",
+        "weight": 0
+      },
+      {
+        "name": "Holy symbol (tankard)",
+        "Description": "",
+        "value": "0gp",
+        "weight": 0
+      }
+    ]
+  },
+  "CharacterStatus": {
+    "Conditions": {
+      "Blinded": false,
+      "Charmed": false,
+      "Deafened": false,
+      "Frightened": false,
+      "Grappled": false,
+      "Incapacitated": false,
+      "Invisible": false,
+      "Paralyzed": false,
+      "Petrified": false,
+      "Poisoned": false,
+      "Prone": false,
+      "Restrained": false,
+      "Stunned": false,
+      "Unconscious": false
+    },
+    "HitPoints": {
+      "Current": 0,
+      "Max": 0
+    },
+    "TempHitPoints": {
+      "Current": 0,
+      "Max": 0
+    },
+    "HitDice": "1d8",
+    "speed": 25,
+    "ArmorClass": 15,
+    "Boons": "",
+    "DeathSaves": {
+      "Successes": 0,
+      "Failures": 0
+    }
+  },
+  "Weapons": [
+    {
+      "name": "WarHammer",
+      "AttackBonus": 4,
+      "DamageType": "Bludgeoning",
+      "AttackDice": "1d8",
+      "Range": "6ft"
+    },
+    {
+      "name": "Club",
+      "AttackBonus": 4,
+      "DamageType": "Bludgeoning",
+      "AttackDice": "1d4",
+      "Range": "6ft"
+    },
+    {
+      "name": "Light Hammer",
+      "AttackBonus": 4,
+      "DamageType": "Bludgeoning/Range",
+      "AttackDice": "1d4",
+      "Range": "6ft/60ft"
+    }
+  ],
+  "ClassResources": [
+    {
+      "name": "",
+      "value": "",
+      "Description": "",
+      "Uses": 0
+    }
+  ],
+  "Traits": {
+    "Inspiration": false,
+    "PersonalityTraits": [
+      "I enjoy Sailing into new ports and making new friends over a flagon of Ale",
+      "I Never pass a A friendly wager"
+    ],
+    "Ideals": [
+      " I Seek to prove Myself worthy of my gods favour by matching against his of her teachings"
+    ],
+    "Bonds": [
+      "I am trying to pay off an old debt i owe to a generous benefactor"
+    ],
+    "Flaws": ["Once i start drinking its hard for me to stop"]
+  },
+  "Proficiencies": [
+    "Water vehicles",
+    "Tool proficiency",
+    "brewers tools",
+    "Navigator tools",
+    "Speak/read/write common and dwarvish ",
+    "light armor/medium armor/sheilds",
+    "all simple weapons",
+    "Dwavern combat training, good with : battle axe, Handaxe, throwing hammer,warhammer"
+  ],
+  "Languages": ["Common", "Dwarvish"],
+  "Features": [],
+  "CharacterAppearance": {
+    "Age": "",
+    "Height": "",
+    "Weight": "",
+    "Eyes": "",
+    "Skin": "",
+    "Hair": ""
+  },
+  "CharacterBackStory": {},
+  "AlliesAndOrganizations": {},
+  "additionalFeatures": {},
+  "Other": {},
+  "spells": [
+    {
+      "name": "cantrips",
+      "level": 0,
+      "slots": 0,
+      "remaining": 1,
+      "spells": [
+        {
+          "level": 0,
+          "name": "Sacred Flame",
+          "CastingTime": "1 action",
+          "Classes": ["Cleric"],
+          "Components": "V, S",
+          "Description": "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw.\n\nThe spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+          "Duration": "Instantaneous",
+          "Level": 0,
+          "Range": "60 feet",
+          "School": "Evocation"
+        },
+        {
+          "level": 0,
+          "name": "Spare the Dying",
+          "CastingTime": "1 action",
+          "Classes": ["Cleric"],
+          "Components": "V, S",
+          "Description": "You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs.",
+          "Duration": "Instantaneous",
+          "Level": 0,
+          "Range": "Touch",
+          "School": "Necromancy"
+        }
+      ]
+    },
+    {
+      "name": "Level 1",
+      "level": 1,
+      "slots": 2,
+      "remaining": 1,
+      "spells": [
+        {
+          "name": "Bane",
+          "CastingTime": "1 action",
+          "Components": "V, S, M (a drop of blood)",
+          "Description": "Up to three creatures of your choice that you can see within range each take 1d6 necrotic damage.\n\nA spellcaster or warlock of 1st level or higher can’t be affected.",
+          "Duration": "Instantaneous",
+          "Level": 1,
+          "Range": "30 feet",
+          "School": "Necromancy"
+        },
+        {
+          "name": "Bless",
+          "CastingTime": "1 action",
+          "Components": "V, S",
+          "Description": "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.",
+          "Duration": "Concentration, up to 1 minute",
+          "Level": 1,
+          "Range": "30 feet",
+          "School": "Enchantment"
+        },
+        {
+          "name": "Command",
+          "CastingTime": "1 action",
+          "Components": "V",
+          "Description": "You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. The spell has no effect if the target is undead, if it doesn’t understand your language, or if your command is directly harmful to it.\n\nSome typical commands and their effects follow. You might issue a command other than one described here. If you do so, the DM determines how the target behaves. If the target can’t follow your command, the spell ends.\n\nApproach. The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you.\n\nDrop. The target drops whatever it is holding and then ends its turn.\n\nFlee. The target spends its turn moving away from you by the fastest available means.\n\nGrovel. target"
+        },
+        {
+          "name": "Cure Wounds",
+          "CastingTime": "1 action",
+          "Components": "V, S",
+          "Description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+          "Duration": "Instantaneous",
+          "Level": 1,
+          "Range": "Touch",
+          "School": "Evocation"
+        },
+        {
+          "name": "Detect Evil and Good",
+          "CastingTime": "1 action",
+          "Components": "V, S",
+          "Description": "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.",
+          "Duration": "Concentration, up to 10 minutes",
+          "Level": 1,
+          "Range": "Self",
+          "School": "Divination"
+        },
+        {
+          "name": "Disguise Self",
+          "CastingTime": "1 action",
+          "Components": "V, S",
+          "Description": "You make yourself – including your clothing, armor, weapons, and other belongings on your person – look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can’t change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.\n\nThe changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.\n\nTo discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.",
+          "Duration": "1 hour",
+          "Level": 1,
+          "Range": "Self",
+          "School": "Illusion"
+        },
+        {
+          "name": "Create/Destroy Water",
+          "CastingTime": "1 action",
+          "Components": "V, S",
+          "Description": "You either create or destroy water.",
+          "Duration": "Instantaneous",
+          "Level": 1,
+          "Range": "30 feet",
+          "School": "Transmutation"
+        },
+        {
+          "name": "Detect Magic",
+          "CastingTime": "1 action",
+          "Components": "V, S",
+          "Description": "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.\n\nThe spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
+          "Duration": "Concentration, up to 10 minutes",
+          "Level": 1,
+          "Range": "Self",
+          "School": "Divination"
+        },
+        {
+          "name": "Detect Poison and Disease",
+          "CastingTime": "1 action",
+          "Components": "V, S",
+          "Description": "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case.\n\nThe spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.\n\nConcentration: As an action, you can end the spell early.",
+          "Duration": "Concentration, up to 1 minute",
+          "Level": 1,
+          "Range": "Self",
+          "School": "Detection"
+        },
+        {
+          "name": "Guiding Bolt",
+          "CastingTime": "1 action",
+          "Components": "V, S",
+          "Description": "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes 4d6 radiant damage, and the next attack roll made against this target before the end of your next turn has advantage, thanks to the mystical dim light glittering on the target until then.",
+          "Duration": "Instantaneous",
+          "Level": 1,
+          "Range": "120 feet",
+          "School": "Evocation"
+        },
+        {
+          "name": "Healing Word",
+          "CastingTime": "1 bonus action",
+          "Components": "V",
+          "Description": "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+          "Duration": "Instantaneous",
+          "Level": 1,
+          "Range": "60 feet",
+          "School": "Evocation"
+        },
+        {
+          "name": "Protection from Evil and Good",
+          "CastingTime": "1 action",
+          "Components": "V, S",
+          "Description": "Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead. The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can’t be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect.",
+          "Duration": "Concentration, up to 10 minutes",
+          "Level": 1,
+          "Range": "Touch",
+          "School": "Abjuration"
+        },
+        {
+          "name": "Sanctuary",
+          "CastingTime": "1 bonus action",
+          "Components": "V, S",
+          "Description": "You ward a creature within range against attack. Until the spell ends, any creature who targets",
+          "Duration": "1 round",
+          "Level": 1,
+          "Range": "30 feet",
+          "School": "Abjuration"
+        },
+        {
+          "name": "Purify food/Drink",
+          "CastingTime": "1 action",
+          "Components": "V, S",
+          "Description": "All nonmagical food and drink within a 5-foot-radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease.",
+          "Duration": "Instantaneous",
+          "Level": 1,
+          "Range": "10 feet",
+          "School": "Transmutation"
+        },
+        {
+          "name": "Sheild of Faith",
+          "CastingTime": "1 bonus action",
+          "Components": "V, S",
+          "Description": "A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.",
+          "Duration": "Concentration, up to 10 minutes",
+          "Level": 1,
+          "Range": "30 feet",
+          "School": "Abjuration"
+        },
+        {
+          "name": "Charm Person",
+          "CastingTime": "1 action",
+          "Components": "V, S",
+          "Description": "You attempt to charm a humanoid you can see within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you.",
+          "Duration": "Concentration, up to 1 hour",
+          "Level": 1,
+          "Range": "30 feet",
+          "School": "Enchantment"
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "level": 3,
+      "slots": 0,
+      "remaining": 0,
+      "spells": []
+    },
+    {
+      "name": "Level 4",
+      "level": 4,
+      "slots": 0,
+      "remaining": 0,
+      "spells": []
+    },
+    {
+      "name": "Level 5",
+      "level": 5,
+      "slots": 0,
+      "remaining": 0,
+      "spells": []
+    },
+    {
+      "name": "Level 6",
+      "level": 6,
+      "slots": 0,
+      "remaining": 0,
+      "spells": []
+    },
+    {
+      "name": "Level 7",
+      "level": 7,
+      "slots": 0,
+      "remaining": 0,
+      "spells": []
+    },
+    {
+      "name": "Level 8",
+      "level": 8,
+      "slots": 0,
+      "remaining": 0,
+      "spells": []
+    },
+    {
+      "name": "Level 9",
+      "level": 9,
+      "slots": 0,
+      "remaining": 0,
+      "spells": []
+    },
+    {
+      "name": "Level 10",
+      "level": 10,
+      "slots": 0,
+      "remaining": 0,
+      "spells": []
+    }
+  ]
+}

@@ -1,3 +1,16 @@
 .container {
-  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  flex-direction: column;
+  height: 100vh;
+  align-content: flex-start;
+}
+
+.spell-container {
+  width: 450px;
+  padding: 10px;
+  border-style: none;
+  border-left: 3px double black;
+  border-right: 3px double black;
 }

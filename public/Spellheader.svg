@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="400"
-   height="60"
-   viewBox="0 0 105.83333 15.875"
+   width="431.47556"
+   height="59.233116"
+   viewBox="0 0 114.16124 15.672095"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
@@ -27,8 +27,8 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:zoom="2"
-     inkscape:cx="76"
-     inkscape:cy="72.5"
+     inkscape:cx="74.5"
+     inkscape:cy="72"
      inkscape:window-width="2560"
      inkscape:window-height="1377"
      inkscape:window-x="-8"
@@ -37,17 +37,22 @@
      inkscape:current-layer="layer1"
      inkscape:snap-intersection-paths="true"
      inkscape:snap-midpoints="true"
-     inkscape:lockguides="false" />
+     inkscape:lockguides="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <defs
      id="defs2" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-0.42631402,-0.18772844)">
     <path
        id="path20702"
-       style="fill:none;stroke:#000000;stroke-width:0.401714;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 8.4124285,13.175062 H 104.20272 l -0.0366,-10.3240537 -0.4484,-6e-7 -95.3053475,1.3e-6"
+       style="fill:none;stroke:#000000;stroke-width:0.422228;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 8.4045786,13.167878 H 114.37561 l -0.0405,-10.3096854 -0.49606,-6e-7 -105.4345434,1.3e-6"
        sodipodi:nodetypes="ccccc" />
     <path
        sodipodi:type="star"

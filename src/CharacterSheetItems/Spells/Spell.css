@@ -1,5 +1,8 @@
 .spell-item,
-.Spell-Item-Editor-Row {
+.spell-item--expanded,
+.spell-item-invalid,
+.spell-item--expanded-base,
+.spell-item-editor-row {
   background-color: white;
   font-variant: small-caps;
   border-bottom: 1px lightslategray solid;
@@ -9,24 +12,43 @@
   padding-left: 30px;
 }
 
+.spell-item--expanded-base {
+  padding-left: 90px;
+  border-bottom: 1px lightslategray solid;
+  max-height: 1200px;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+
+.spell-item-collapsed-base {
+  padding: 3px;
+  padding-left: 90px;
+  font-variant: small-caps;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height cubic-bezier(0, 1.12, 0, 0.66) 0.25s;
+  margin-left: 13px;
+  margin-right: 13px;
+}
+
 .spell-item:hover {
   background-color: rgba(211, 211, 211, 0.5);
   background-blend-mode: lighten;
 }
 
-.Spell-Item-Editor-Row {
+.spell-item-editor-Row {
   display: flex;
   flex-direction: row;
 }
 
-.Spell-Item-Editor {
+.spell-item-editor {
   height: 2em;
   width: 100%;
   border-style: hidden;
   font-variant: small-caps;
 }
 
-.Spell-Edit-Button {
+.spell-edit-button {
   border: 1px;
   background-color: white;
   border-style: inset;
@@ -34,7 +56,7 @@
   box-shadow: inset;
 }
 
-.Spell-Item-Editor:hover {
+.spell-item-editor:hover {
   background-color: rgba(211, 211, 211, 0.5);
   background-blend-mode: lighten;
 }
@@ -43,22 +65,27 @@
   display: flex;
   font-variant: small-caps;
   height: 60px;
-  background-image: url("../../public/Spellheader.svg");
+  width: 100%;
+  background-image: url("../../../public/spellheader.svg");
   background-repeat: no-repeat;
-  background-size: stretch;
+  background-size: contain;
   align-items: center;
   justify-content: center;
 }
 
-.Spell-Level {
+.spell-level {
   flex: 0;
   padding-left: 20px;
   width: 50px;
 }
 
-.Spell-Type {
+.spell-type {
   flex: 1;
   text-align: center;
   font-size: x-large;
   width: 100%;
+}
+
+.spell-slot {
+  padding-right: 50px;
 }

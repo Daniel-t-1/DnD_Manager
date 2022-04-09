@@ -1,8 +1,8 @@
 .spell-item,
 .spell-item--expanded,
-.spell-item-Invalid,
+.spell-item-invalid,
 .spell-item--expanded-base,
-.spell-item-editor-Row {
+.spell-item-editor-row {
   background-color: white;
   font-variant: small-caps;
   border-bottom: 1px lightslategray solid;

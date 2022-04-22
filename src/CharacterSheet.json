@@ -152,69 +152,80 @@
     "Items": [
       {
         "name": "BackPack",
-        "Description": "",
+        "Description": "BackPack that can hold up to 10 items",
         "value": "0gp",
-        "weight": 0
+        "weight": 0,
+        "quantity": 1
       },
       {
         "name": "Blanket",
-        "Description": "",
+        "Description": "A warm blanket",
         "value": "0gp",
-        "weight": 0
+        "weight": 0,
+        "quantity": 1
       },
       {
-        "name": "10 Candles",
-        "Description": "",
+        "name": "Candles",
+        "Description": "candles",
         "value": "0gp",
-        "weight": 0
+        "weight": 0,
+        "quantity": 10
       },
       {
         "name": "TinderBox",
-        "Description": "",
+        "Description": "A tinder box that can start fires",
         "value": "0gp",
-        "weight": 0
+        "weight": 0,
+        "quantity": 1
       },
       {
         "name": "Alms Box",
         "Description": "",
         "value": "0gp",
-        "weight": 0
+        "weight": 0,
+        "quantity": 1
       },
       {
         "name": "2 blocks of incense",
         "Description": "",
         "value": "0gp",
-        "weight": 0
+        "weight": 0,
+        "quantity": 1
       },
       {
         "name": "censer",
         "Description": "",
         "value": "0gp",
-        "weight": 0
+        "weight": 0,
+        "quantity": 1
       },
       {
         "name": "vestments 2 days of rations ",
         "Description": "",
         "value": "0gp",
-        "weight": 0
+        "weight": 0,
+        "quantity": 1
       },
       {
         "name": "waterskin",
         "Description": "",
         "value": "0gp",
-        "weight": 0
+        "weight": 0,
+        "quantity": 1
       },
       {
         "name": "Sheild",
         "Description": "",
         "value": "0gp",
-        "weight": 0
+        "weight": 0,
+        "quantity": 1
       },
       {
         "name": "Holy symbol (tankard)",
         "Description": "",
         "value": "0gp",
-        "weight": 0
+        "weight": 0,
+        "quantity": 1
       }
     ]
   },
